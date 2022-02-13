@@ -1,0 +1,81 @@
+#HOTKEYSSSSSSSSSSSSSSSSSS
+
+#Run shutdown menu script
+super + shift + q
+	dmenu-shutdown
+
+#Open Chromium
+super + w
+	chromium > /dev/null 2>&1
+
+#Open brave
+super + shift + w
+	brave > /dev/null 2>&1
+
+#Open firefox
+super + shift + f
+	firefox > /dev/null 2>&1
+
+#Open Dmenu
+super + d
+	dmenu_run
+
+#Open Discord
+super + shift + d
+	discord > /dev/null 2>&1
+
+#Open Anki
+super + shift + a
+	anki > /dev/null 2>&1
+
+#Open screenshot
+super + s
+	flameshot gui
+
+#Open Ranger
+super + r
+	ranger
+
+#Open KanjiTomo
+super + shift + k
+	kanjitomo > /dev/null 2>&1
+
+#Open thunar
+super + shift + t
+	dolphin > /dev/null 2>&1
+
+#Open music player
+super + shift + m
+	music_player
+
+#Open NewsBoat
+super + n
+	newsboat
+
+super + F4
+	kill -45 $(pidof dwmblocks)
+
+
+
+
+
+#VOLUME
+#
+#Volume up 5%
+super + F12
+	pulseaudio-ctl up && kill -44 $(pidof dwmblocks)
+#Volume down 5%
+super + F11
+	pulseaudio-ctl down && kill -44 $(pidof dwmblocks)
+#Volume up 15%
+super + shift + F12	
+	pulseaudio-ctl up 15 && kill -44 $(pidof dwmblocks)
+#Volume down 15%
+super + shift + F11
+	pulseaudio-ctl down 15 && kill -44 $(pidof dwmblocks)
+#Volume mute
+super + F10
+	pulseaudio-ctl mute && kill -44 $(pidof dwmblocks)
+#Volume mute
+super + shift + F10
+	pulseaudio-ctl mute-input && kill -44 $(pidof dwmblocks)
