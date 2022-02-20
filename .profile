@@ -52,6 +52,8 @@ alias suc="cd ~/Programs/suckless"
 alias conf="cd ~/.config"
 alias sxrc="vim ~/.config/sxhkd/sxhkdrc"
 alias strc="vim ~/suckless/st/config.h"
+alias prc="vim ~/.profile"
+alias zrc="vim ~/.zshrc"
 alias dwmrc="vim ~/Programs/suckless/dwm/config.h"
 alias brc="vim ~/.bashrc"
 alias vrc="vim ~/.vimrc"
@@ -75,8 +77,9 @@ alias xresources_reload="xrdb ~/.Xresources"
 alias untar="tar -xvzf"
 alias c="clear"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias ktm='tmux kill-session'
 
-alias music='tmux new-session -s $$ "tmux source-file ~/.config/ncmpcpp/tsession"'
+alias music='tmux new-session -s $$ "tmux source-file ~/.config/ncmpcpp/tsession-fullscreen"'
 _trap_exit() { tmux kill-session -t $$; }
 trap _trap_exit EXIT
 

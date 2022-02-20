@@ -1,4 +1,4 @@
-#HOTKEYSSSSSSSSSSSSSSSSSS
+#HOTKEYS
 
 #Run shutdown menu script
 super + shift + q
@@ -55,6 +55,8 @@ super + n
 super + F4
 	kill -45 $(pidof dwmblocks)
 
+super + shift + p
+	killall python3
 
 
 
@@ -79,3 +81,19 @@ super + F10
 #Volume mute
 super + shift + F10
 	pulseaudio-ctl mute-input && kill -44 $(pidof dwmblocks)
+
+#Music player controls
+super + {F7, F8}
+	mpc {prev, next}
+
+super + F5
+	mpc toggle
+
+super + F6
+	mpc stop
+
+super + F9 
+	mpc random	
+
+super + shift + F9
+	mpc repeat

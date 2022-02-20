@@ -5,7 +5,7 @@ COVER_SIZE="400"
 
 #path to current song
 song="$MUSIC_DIR/$(mpc --format %file% current)"
-echo $song
+#echo $song
 #search for cover image
 #art=$(find "$album"  -maxdepth 1 | grep -m 1 ".*\.\(jpg\|png\|gif\|bmp\)")
 #art=$()
