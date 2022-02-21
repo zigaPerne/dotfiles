@@ -84,16 +84,24 @@ super + shift + F10
 
 #Music player controls
 super + {F7, F8}
-	mpc {prev, next}
+	mpc {prev, next} #&& notify-send "Music Player" "NOW PLAYING: $(mpc | head -1)"
 
 super + F5
-	mpc toggle
+	mpc toggle && notify-send "Music Player" "~$(mpc | grep -o '\[[a-z].*\]' | tr -d '[]' | tr 'a-z' 'A-Z')~   $(mpc | head -1)" -t 5000
+
+super + shift + F5
+	notify-send "Music Player" "NOW PLAYING: $(mpc | head -1)" -t 5000
 
 super + F6
-	mpc stop
+	mpc stop && notify-send "Music Player" "Stopped" -t 2000
 
 super + F9 
-	mpc random	
+	mpc random && notify-send "Music Player" "$(mpc | grep -Po 'random: [a-z]\{2,3\}')" -t 2000
 
 super + shift + F9
-	mpc repeat
+	mpc repeat && notify-send "Music Player" "$(mpc | grep -Po 'repeat: [a-z]\{2,3\}')" -t 2000
+
+
+
+super + shift + d
+	killall sxhkd && sxhkd
